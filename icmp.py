@@ -1,6 +1,7 @@
 from scapy.all import *
 
-packet = IP(dst="8.8.8.8") / ICMP(type="echo-request")
+packet = IP(dst="164.100.3.1") / ICMP(type="echo-request")
+# packet = IP(dst="8.8.8.8") / ICMP(type="echo-request")
 
 response = sr1(packet, timeout=2, verbose=False)
 

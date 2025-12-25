@@ -1,5 +1,6 @@
 from scapy.all import *
 
+# http://example.com
 packet = IP(dst="104.18.26.120") / TCP(sport=RandShort(), dport=80, flags="S", seq=1000)
 
 response = sr1(packet, timeout=2, verbose=False)

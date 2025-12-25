@@ -1,7 +1,7 @@
 from scapy.all import *
 
-packet = IP(dst="164.100.3.1") / UDP(sport=RandShort(), dport=53) / \
-         DNS(rd=1, qd=DNSQR(qname="example.com"))
+packet = IP(dst="164.100.3.1") / UDP(sport=RandShort(), dport=53) / DNS(rd=1, qd=DNSQR(qname="example.com"))
+# packet = IP(dst="8.8.8.8") / UDP(sport=RandShort(), dport=53) / DNS(rd=1, qd=DNSQR(qname="example.com"))
 
 response = sr1(packet, timeout=2, verbose=False)
 
